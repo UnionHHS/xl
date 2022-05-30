@@ -21,13 +21,13 @@ excel_target2 = pre_excel_1.values
 # excel_target2 = excel_1['reser_0516_user'].values
 
 for i in excel_target2:
-    if 'T1' in i[1] or 'T2' in i[1] or 'T3' in i[1]:
-        if i[1] in tt.keys():
-            pass
-        else:
-            tt[i[1]] = []
+    # if 'T1' in i[1] or 'T2' in i[1] or 'T3' in i[1]:
+    if i[1] in tt.keys():
+        pass
     else:
-        continue
+        tt[i[1]] = []
+    # else:
+    #     continue
     for j in excel_target1:
         if i[2] == j[4]:
             temp = []
@@ -72,6 +72,6 @@ for i in tt.keys():
 
 data = pd.DataFrame(t)
 data = data.set_index("NO")
-data.to_excel("2201-2205_1Center_IoT_Check_Result.xlsx")
+data.to_excel("2201-2205_1-2Center_IoT_Check_Result.xlsx")
 
 print(1)
